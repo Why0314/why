@@ -1,0 +1,109 @@
+1. Math.abs(a)   //取a的绝对值
+
+2. System.out.println(Math.abs(a-b)<le-6);   //判断两个浮点数是否相同  判断差值的绝对值是否比一个很少的数还要少
+
+3. window.onload=function(){
+
+	//当页面中的元素全部加载完成后执行这里的代码
+		}
+
+4. int m=3,n=2; //交换m,n的值
+	m=m+n;	5=3+2
+	n=m-n;	3=5-2
+	m=m-n;	2=5-3		局限性：如果m+n的值极大 会超出int的范围
+   第二种方法
+	n=n^m //异或
+	m=n^m //(n^m)^m=n
+	n=n^m //n^(n^m) 
+
+5.  for循环  
+class ForTest
+{
+	public static void main(String[] args)
+	{
+		int x=1;
+		for(System.out.println("a");x<3;System.out.println("c")) //是合法表达式就可以		运行结果为adcdc。
+		{
+			System.out.println("d");
+			x++;
+		}
+	}
+}
+6. 布尔类型 boolean 
+	函数返回布尔值 
+	1). if(a==b)
+		return ture;
+	    else
+		return false;   //因为只要有返回值 函数调用就结束了，所以else 可注释掉
+	2). return (a==b)?turn:false;
+	3). return a==b; 因为返回类型是布尔型，所以可以简化成这样.
+7. 数组名.length    获取该数组的长度。
+	例：public static void main(String[] args)
+	{
+		int[] arr={4,8,7,6,3};
+		//int x = arr.length;
+		for (int a=0;a<arr.length;a++)         //获取数组arr的长度进行遍历打印。
+		{
+			System.out.println("arr["+a+"]:"+arr[a]);
+		}
+	}
+	
+	结果为  arr[0]:4
+		arr[1]:8
+		arr[2]:7
+		arr[3]:6
+		arr[4]:3
+8. //ArrayIndexOutOfBoundsException: 3 访问了不存在的角标
+		//NullPointerException     空指针异常。
+9. public static void tobin(int num)
+	{
+		StringBuffer sb = new StringBuffer();//建一个容器，用来储存东西；
+		while(num>0)
+		{
+			sb.append(num%2);//往sb中存每次计算的值
+			num=num/2;
+		}
+		System.out.println(sb.reverse());//sb.reverse()倒序输出容器中储存的值
+		
+	}
+10. 面对对象：三个特征：封装，继承，多态；
+	类和对象的关系。
+	类就是：对现实生活中事物的描述。
+	对象：就是这类事物，实实在在存在个体。
+11. 构造函数
+	特点：1.函数名与类名相同
+	      2.不用定义返回类型
+              3.不可以写return语句
+	作用：给对象进行初始化。
+12/*
+ * 数组复制
+ * 1.System.arraycopy(原数组，原数组下标，目标数组，目标数组下标，长度）
+ * 2.Arrays.copyOf(原数组，长度）
+ */
+13.*随机数
+ *1）java.util.Random
+ *		nextInt(int n);随机生成一个0到n之间的随机数，包括0，不包括n
+ *
+ *Random random = new Random();
+			int number = random.nextInt(100) + 1;
+ *
+ *2)Math.random()   随机生成>=0.0且<1.0的伪随机double值
+ *例：int num =  (int) (Math.random()*10+1)  随机1-11的整数
+14.键盘输入
+Scanner sc = new Scanner(System.in);
+		int i = sc.nextInt();
+15.增强For循环
+遍历arr数组，每次把arr的角标给i
+for(int i:arr){
+	system.out.println(i);//输出arr[i]
+}
+16.包装类
+
+byte     Byte
+short    Short
+int      Integer
+long     Long
+float    Float
+double	 Double
+boolean  Boolean
+char     Character
